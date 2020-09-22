@@ -28,17 +28,19 @@ git rm readme.txt				// 命令用于删除一个文件
 
 
 /*------------------- 创建分支 --------------------*/
-git switch -b dev				// git switch -b参数表示创建并切换
-								// 等价于git branch dev --> git switch dev
-git branch						// 命令查看当前分支;列出所有分支，当前分支前面会标一个*号。
+git switch -c dev								// git switch -c参数表示创建并切换
+												// 等价于git branch dev --> git switch dev
+git branch										// 命令查看当前分支;列出所有分支，当前分支前面会标一个*号。
 
 dev分支的工作完成，我们就可以切换回master分支：
-git switch master				// 切换回master分支
-git merge dev					// 命令用于合并指定分支到当前分支。
+git switch master								// 切换回master分支
+git merge dev									// 命令用于合并指定分支到当前分支，默认Fast forward模式。
+git merge --no-ff -m "merge with no-ff" dev		// 注意--no-ff参数，表示禁用Fast forward
+												// 合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
 
 合并完成后：
-git branch -d dev				// 删除dev分支
+git branch -d dev								// 删除dev分支
 
 删除后，查看git branch，就只剩下master分支了。
-
+git branch -D <name>							// 没有合并过的分支使用大写D删除分支		
 
