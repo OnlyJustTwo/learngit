@@ -1,3 +1,4 @@
+/*-----------------整理https://www.liaoxuefeng.com/wiki/896043488029600----------------*/
 mkdir learngit                  // 创建版本库
 cd learngit
 pwd                             // 命令用于显示当前目录
@@ -17,3 +18,9 @@ git reset --hard commit_id		// 我们在版本的历史之间穿梭
 git checkout -- readme.txt		// 把readme.txt文件在工作区的修改全部撤销，用版本库里的版本替换工作区的版本
 								// 让这个文件回到最近一次git commit或git add时的状态
 git rm readme.txt				// 命令用于删除一个文件
+
+/*------------------- 创建公匙SSH链接远程库 --------------------*/
+1.	git bash输入	ssh-keygen -t rsa -C "youremail@example.com"	// 邮件地址换成你自己的邮件地址，然后一路回车使用默认值即可
+																	// 成功后在用户主目录（C:\Users\YOURNAME\.ssh）里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+2.	登陆GitHub-->单击头像-->settings-->单击SSH and GPG keys-->New SSH key-->title随便填key填入id_rsa.pub所有内容-->Add Key
+3.	单击头像旁的＋号-->单击New repository-->填写Repository name后直接创建-->跟着git remote提示一直在git上回车就OK
