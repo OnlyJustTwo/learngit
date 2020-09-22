@@ -28,12 +28,12 @@ git rm readme.txt				// 命令用于删除一个文件
 
 
 /*------------------- 创建分支 --------------------*/
-git checkout -b dev				// git checkout命令加上-b参数表示创建并切换
-								// 等价于git branch dev --> git checkout dev
+git switch -b dev				// git switch -b参数表示创建并切换
+								// 等价于git branch dev --> git switch dev
 git branch						// 命令查看当前分支;列出所有分支，当前分支前面会标一个*号。
 
 dev分支的工作完成，我们就可以切换回master分支：
-git checkout master				// 切换回master分支
+git switch master				// 切换回master分支
 git merge dev					// 命令用于合并指定分支到当前分支。
 
 合并完成后：
