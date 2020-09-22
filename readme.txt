@@ -14,3 +14,6 @@ git reset --hard HEAD^			// 回退到上一个版本
 git reflog						// 查看命令历史
 git reset --hard commit_id		// 我们在版本的历史之间穿梭
 								// commit_id版本ID
+git checkout -- readme.txt		// 把readme.txt文件在工作区的修改全部撤销，用版本库里的版本替换工作区的版本
+								// 让这个文件回到最近一次git commit或git add时的状态
+git rm readme.txt				// 命令用于删除一个文件
