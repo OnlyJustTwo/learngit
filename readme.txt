@@ -29,6 +29,7 @@ git rm readme.txt				// 命令用于删除一个文件
 
 /*------------------- 创建分支 --------------------*/
 git switch -c dev								// git switch -c参数表示创建并切换
+git push -u origin  dev    						//将新建分支同步到线上
 												// 等价于git branch dev --> git switch dev
 git branch										// 命令查看当前分支;列出所有分支，当前分支前面会标一个*号。
 
